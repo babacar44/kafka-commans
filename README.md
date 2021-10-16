@@ -54,3 +54,29 @@ auto.create.topics.enable=false
 Provide the new server.properties thats added.
 .\kafka-server-start.sh ../config/server-1.properties
 .\kafka-server-start.sh ../config/server-2.properties
+ 
+ -----------------------------------------------------------------------------------------------
+ 
+# List the topics in a cluster
+.\kafka-topics.bat --zookeeper localhost:2181 --list
+
+# Describe topic
+The below command can be used to describe all the topics.
+.\kafka-topics.bat --zookeeper localhost:2181 --describe
+ 
+# The below command can be used to describe a specific topic.
+.\kafka-topics.bat --zookeeper localhost:2181 --describe --topic <topic-name>
+ 
+# Alter the min insync replica.\vkafka-topics.bat --alter --zookeeper localhost:2181 --topic library-events --config min.insync.replicas=2
+ 
+# Delete a topic
+.\kafka-topics.bat --zookeeper localhost:2181 --delete --topic <topic-name>
+ 
+# How to view consumer groups
+.\kafka-consumer-groups.bat --bootstrap-server localhost:9092 --list
+ 
+# Consumer Groups and their Offset
+.\kafka-consumer-groups.bat --bootstrap-server localhost:9092 --describe --group console-consumer-27773
+ 
+# Viewing the Commit Log
+.\kafka-run-class.bat kafka.tools.DumpLogSegments --deep-iteration --files /tmp/kafka-logs/test-topic-0/00000000000000000000.log
