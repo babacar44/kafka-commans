@@ -31,7 +31,7 @@ Start Zookeeper and Kafka Broker
 * With Key
 .\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic test-topic --from-beginning -property "key.separator= - " --property "print.key=true"
 
-With Consumer Group
+* With Consumer Group
 .\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic test-topic --group <group-name>
   
 # Setting Up Multiple Kafka Brokers
