@@ -13,8 +13,8 @@ Start Zookeeper and Kafka Broker
 .\kafka-server-start.bat ..\..\config\server.properties
 
 # How to create a topic ?
-.\kafka-topics.bat --create --topic test-topic -zookeeper localhost:2181 --replication-factor 1 --partitions 4
-
+ .\kafka-topics.bat --create --topic test-topic --bootstrap-server localhost:2181 --replication-factor 1 --partitions 4
+ 
 # How to instantiate a Console Producer?
 * Without Key
 .\kafka-console-producer.bat --broker-list localhost:9092 --topic test-topic
