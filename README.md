@@ -1,4 +1,4 @@
-# kafka-commans
+# kafka-commands
 
 # Setting Up Kafka
 
